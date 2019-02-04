@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Borgniki", "Borgniki.csproj", "{0016BF35-0333-492E-8B0F-B98109F3614C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0016BF35-0333-492E-8B0F-B98109F3614C}.Debug|x86.ActiveCfg = Debug|x86
+		{0016BF35-0333-492E-8B0F-B98109F3614C}.Debug|x86.Build.0 = Debug|x86
+		{0016BF35-0333-492E-8B0F-B98109F3614C}.Release|x86.ActiveCfg = Release|x86
+		{0016BF35-0333-492E-8B0F-B98109F3614C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A799D03-9E7E-4FCF-B587-A41918B0CB55}
+	EndGlobalSection
+EndGlobal
