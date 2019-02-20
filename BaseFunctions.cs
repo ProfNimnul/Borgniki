@@ -8,24 +8,27 @@ namespace Borgniki
 {
     class BaseFunctions
     {
-     //   public static Dictionary<string, string> dictionary;
-        
+        public static FileIniDataParser parser = new FileIniDataParser();
+
+        public static string pathToConfigIni;
+
+        public static string GetRootFolderOfCurrentDisk() // возвращает корневую папку текущего диска
+        {
+            return Path.GetPathRoot(Directory.GetCurrentDirectory());
+        }
 
         public static IniData OpenAndReadConfig()
         {
             string appfolder = Directory.GetCurrentDirectory()+@"\\";
-          //  string appfolder = Path.GetPathRoot(Directory.GetCurrentDirectory());
-            var parser = new FileIniDataParser();
-            
-            string config = appfolder + "config.ini";
+            pathToConfigIni = appfolder + "config.ini";
             IniData data = new IniData();
            
             data.Configuration.CaseInsensitive = true;
         
             
             
-            if (File.Exists(config)) { 
-                 data = parser.ReadFile(config,Encoding.GetEncoding("Windows-1251"));
+            if (File.Exists(pathToConfigIni)) { 
+                 data = parser.ReadFile(pathToConfigIni,Encoding.GetEncoding("Windows-1251"));
 
                
                 }
@@ -34,7 +37,7 @@ namespace Borgniki
 
         }
 
-        public static Dictionary<string, string> GetSectionItemsFromDataIni(IniData data, string sect)
+        public static Dictionary<string, string> GetSectionItemsFromConfigIni(IniData data, string sect)
         {// возвращает словарь данных, заполненный парами из секции sect
             SectionData section = data.Sections.GetSectionData(sect);
             Dictionary<string, string> dictionary = new Dictionary<string, string>();

@@ -1,0 +1,25 @@
+E:\Borgniki — копия\obj\x86\Debug\Borgniki.csprojAssemblyReference.cache
+E:\Borgniki — копия\obj\x86\Debug\Borgniki.Form1.resources
+E:\Borgniki — копия\obj\x86\Debug\Borgniki.csproj.GenerateResource.cache
+E:\Borgniki — копия\obj\x86\Debug\Borgniki.csproj.CoreCompileInputs.cache
+E:\Borgniki — копия\bin\Debug\WindowsApplication.exe
+E:\Borgniki — копия\bin\Debug\WindowsApplication.pdb
+E:\Borgniki — копия\bin\Debug\INIFileParser.dll
+E:\Borgniki — копия\bin\Debug\INIFileParser.xml
+E:\Borgniki — копия\obj\x86\Debug\Borgniki.csproj.CopyComplete
+E:\Borgniki — копия\obj\x86\Debug\WindowsApplication.exe
+E:\Borgniki — копия\obj\x86\Debug\WindowsApplication.pdb
+e:\Borgniki\bin\Debug\Borgniki.exe.config
+e:\Borgniki\bin\Debug\Borgniki.exe
+e:\Borgniki\bin\Debug\Borgniki.pdb
+e:\Borgniki\bin\Debug\INIFileParser.dll
+e:\Borgniki\bin\Debug\INIFileParser.xml
+e:\Borgniki\obj\x86\Debug\Borgniki.csprojAssemblyReference.cache
+e:\Borgniki\obj\x86\Debug\Borgniki.Form1.resources
+e:\Borgniki\obj\x86\Debug\Borgniki.csproj.GenerateResource.cache
+e:\Borgniki\obj\x86\Debug\Borgniki.csproj.CoreCompileInputs.cache
+e:\Borgniki\obj\x86\Debug\Borgniki.csproj.CopyComplete
+e:\Borgniki\obj\x86\Debug\Borgniki.exe
+e:\Borgniki\obj\x86\Debug\Borgniki.pdb
+E:\Borgniki\bin\Debug\Microsoft.Office.Interop.Excel.dll
+E:\Borgniki\bin\Debug\stdole.dll

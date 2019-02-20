@@ -11,50 +11,56 @@ namespace Borgniki
     {
 
  
-        private string GetRootFolderOfCurrentDisk() // возвращает корневую папку текущего диска
-        {
-            return Path.GetPathRoot(Directory.GetCurrentDirectory());
-        }
+        
 
 
-        private void SaveNewPaths(string item, string path)
-        // dbf="D:\\" - item = path
+        public  void SaveNewPaths(IniData id)
+        
         {
-            // сохраняет пути в файл config.ini (перезаписывает каждый раз)
+            id["paths"]["dbf"] = Form1.pathsDictionary["dbf"];
+            id["paths"]["pdf"] = Form1.pathsDictionary["pdf"];
+            BaseFunctions.parser.WriteFile(BaseFunctions.pathToConfigIni, id, Encoding.GetEncoding("Windows-1251"));
+
         }
 
 
         public void ExtractPathsFromDict(IniData id)
         {
             Form1.pathsDictionary.Clear()              ;
-            Form1.pathsDictionary.Add("pdf", "");
-            Form1.pathsDictionary.Add("dbf", "");
-
-
-
-            string rootfolder = GetRootFolderOfCurrentDisk();
-            bool containPaths = id.Sections.ContainsSection("paths");                                                  
-            if  (containPaths) // такой секции нет
-
-
-            {
-                SectionData section = id.Sections.GetSectionData("paths");
-                if (section.Keys["dbf"] == "")
-                    Form1.pathsDictionary["dbf"] = rootfolder;
-
-                if (section.Keys["pdf"] == "")
-                    Form1.pathsDictionary["pdf"] = rootfolder;
-
-            }
-            else
-
-            {
-                Form1.pathsDictionary["dbf"] =rootfolder;
-                Form1.pathsDictionary["pdf"] =rootfolder;
-                //.....
-            }
-            // содержит, проверяем каждый пункт в отдельности
             
+           // Form1.pathsDictionary.Add("dbf", ""];
+
+
+
+            string rootfolder = BaseFunctions.GetRootFolderOfCurrentDisk();
+            bool containPaths = id.Sections.ContainsSection("paths");
+            SectionData section = id.Sections.GetSectionData("paths");
+
+            try
+            {
+                string sss = section.Keys["dbf"];
+                Form1.pathsDictionary.Add("dbf", String.IsNullOrEmpty(sss.Trim())  ? rootfolder : sss );
+            }
+            catch (System.NullReferenceException)
+            {
+              //  Form1.pathsDictionary["dbf"] = rootfolder;
+              Form1.pathsDictionary.Add("dbf", rootfolder);
+            }
+
+
+            try
+            {
+                string sss = section.Keys["pdf"];
+                Form1.pathsDictionary.Add("pdf", String.IsNullOrEmpty(sss.Trim()) ? rootfolder : sss);
+
+            }
+            catch (System.NullReferenceException)
+            {
+               // Form1.pathsDictionary["pdf"] = rootfolder;
+               Form1.pathsDictionary.Add("pdf", rootfolder);
+            }
+        
+
 
 
         }
