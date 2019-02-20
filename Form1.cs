@@ -33,7 +33,10 @@ namespace Borgniki
                      
             Paths paths = new Paths();
             paths.ExtractPathsFromDict(datafromini);
-        
+            
+            BaseFunctions baseFunctions = new BaseFunctions(this);
+
+            baseFunctions.Protocol("Получены данные из словаря и параметры конфигурации");
             
             dbf = new Dbf(); // создали класс Dbf
 

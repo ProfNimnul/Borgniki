@@ -3,14 +3,24 @@ using System.Text;
 using IniParser.Model;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Borgniki
 {
-    class BaseFunctions
+     class BaseFunctions
     {
         public static FileIniDataParser parser = new FileIniDataParser();
 
         public static string pathToConfigIni;
+
+        private Form1 form=new Form1();
+
+
+        public BaseFunctions(Form1 form)
+        {
+            this.form = form;
+        }
 
         public static string GetRootFolderOfCurrentDisk() // возвращает корневую папку текущего диска
         {
@@ -51,7 +61,14 @@ namespace Borgniki
             return dictionary;
         }
 
+        public void Protocol( string msg)
+        {
 
+
+            form.protocolTexBox.Text += msg;
+
+
+        }
     
 
        

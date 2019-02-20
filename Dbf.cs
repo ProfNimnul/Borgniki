@@ -23,6 +23,8 @@ namespace Borgniki
             string path = string.Empty;
 
             bool result = false;
+            xlApp = null;
+            xlWbk = null;
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -173,29 +175,21 @@ namespace Borgniki
         }
 
         public void CloseExcel()
+
         {
-            try
+            if (!(xlWbk == null))
             {
-                {
-                    xlWbk.Saved = true;
-                    xlWbk.Close();
-                }
-                
-            }
-        
-            catch (Exception e)
-            {
-
-            }
-            finally
-            { 
-            
-            xlApp.Quit();
+                xlWbk.Saved = true;
+                xlWbk.Close();
+                xlApp.Quit();
             }
 
 
-
+          
         }
+
+
+    
 
 
 

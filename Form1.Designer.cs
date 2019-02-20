@@ -32,15 +32,17 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.Info = new System.Windows.Forms.Label();
+            this.protocolTexBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // OpenDBF_button
             // 
-            this.OpenDBF_button.Location = new System.Drawing.Point(33, 12);
+            this.OpenDBF_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OpenDBF_button.Location = new System.Drawing.Point(12, 184);
             this.OpenDBF_button.Name = "OpenDBF_button";
-            this.OpenDBF_button.Size = new System.Drawing.Size(123, 41);
+            this.OpenDBF_button.Size = new System.Drawing.Size(318, 41);
             this.OpenDBF_button.TabIndex = 0;
-            this.OpenDBF_button.Text = "Открыть DBF...";
+            this.OpenDBF_button.Text = "Открыть и обработать DBF...";
             this.OpenDBF_button.UseVisualStyleBackColor = true;
             this.OpenDBF_button.Click += new System.EventHandler(this.OpenDBF_button_Click);
             // 
@@ -56,11 +58,20 @@
             this.Info.Size = new System.Drawing.Size(0, 13);
             this.Info.TabIndex = 1;
             // 
+            // protocolTexBox
+            // 
+            this.protocolTexBox.Location = new System.Drawing.Point(12, 12);
+            this.protocolTexBox.Multiline = true;
+            this.protocolTexBox.Name = "protocolTexBox";
+            this.protocolTexBox.Size = new System.Drawing.Size(318, 156);
+            this.protocolTexBox.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(185, 186);
+            this.ClientSize = new System.Drawing.Size(340, 241);
+            this.Controls.Add(this.protocolTexBox);
             this.Controls.Add(this.Info);
             this.Controls.Add(this.OpenDBF_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -79,6 +90,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Label Info;
+        public System.Windows.Forms.TextBox protocolTexBox;
     }
 }
 
